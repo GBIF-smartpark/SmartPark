@@ -5,66 +5,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bgi_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:text="당신의 캐릭터를 골라주세요"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:fontFamily="@font/pixelroborobo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <GridLayout
         android:id="@+id/imageGrid"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="450dp"
         android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_button"
         android:columnCount="2"
         android:gravity="center"
         android:padding="16dp"
         android:rowCount="2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <ImageButton
-            android:id="@+id/specialItem1"
+            android:id="@+id/petBtn1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="10dp"
+            android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/egg1" />
+
 
         <ImageButton
-            android:id="@+id/specialItem2"
+            android:id="@+id/petBtn2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="10dp"
+            android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/egg2" />
+
 
         <ImageButton
-            android:id="@+id/specialItem3"
+            android:id="@+id/petBtn3"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="10dp"
+            android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/egg3" />
+
 
         <ImageButton
-            android:id="@+id/specialItem4"
+            android:id="@+id/petBtn4"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="10dp"
+            android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/egg4" />
     </GridLayout>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/nextBtn"
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_button"
         android:text="제출"
-        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:fontFamily="@font/pixelroborobo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

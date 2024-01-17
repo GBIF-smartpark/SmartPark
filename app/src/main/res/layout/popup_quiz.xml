@@ -1,80 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="400dp"
-    android:layout_centerInParent="true"
-    android:background="@drawable/ic_launcher_foreground">
-
+    android:layout_centerInParent="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
+        <!-- 선물 이미지 -->
+        <TextView
+            android:id="@+id/rewardtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="보상"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:fontFamily="@font/pixelroborobo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- 정답/오답 텍스트 -->
         <ImageView
             android:id="@+id/gift"
             android:layout_width="187dp"
             android:layout_height="126dp"
-            android:layout_marginTop = "30dp"
+            android:src="@drawable/questionmark"
+            android:background="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_launcher_foreground" />
+            app:layout_constraintTop_toBottomOf="@+id/rewardtext" />
 
         <TextView
             android:id="@+id/ox"
             android:layout_width="137dp"
             android:layout_height="37dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
             android:text="정답/오답"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:fontFamily="@font/pixelroborobo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gift" />
 
+        <!-- 해설 텍스트 -->
         <TextView
             android:id="@+id/explan"
             android:layout_width="239dp"
-            android:layout_height="124dp"
+            android:layout_height="68dp"
+            android:background="#FFFFFF"
             android:text="해설"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:fontFamily="@font/pixelroborobo"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ox" />
 
+        <!-- 버튼 레이아웃 -->
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent">
 
+            <!-- GBIF 링크 버튼 -->
             <Button
                 android:id="@+id/openBrowserButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="14dp"
                 android:layout_weight="1"
-                android:text="ok"
-                android:textSize="14sp" />
+                android:background="#8002EC35"
+                android:text="GBIF 링크"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                app:fontFamily="@font/pixelroborobo" />
 
+            <!-- 닫기 버튼 -->
             <Button
                 android:id="@+id/ext_btn"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="14dp"
                 android:layout_weight="1"
-                android:text="GBIF링크"
-                android:textSize="14sp" />
+                android:background="#8002EC35"
+                android:text="닫기"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_marginEnd="16dp"
+                app:fontFamily="@font/pixelroborobo" />
         </LinearLayout>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

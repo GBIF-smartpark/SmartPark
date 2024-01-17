@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 초록색 채우기 부분 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape
+                android:shape="rectangle">
+                <solid android:color="#00FF00" /> <!-- 초록색 -->
+            </shape>
+        </clip>
+    </item>
+    <!-- 프로그레스 바의 배경 -->
+    <item android:id="@android:id/background">
+        <shape
+            android:shape="rectangle">
+            <solid android:color="#80FFFFFF" /> <!-- 배경 색 (예: 흰색) -->
+        </shape>
+    </item>
+</layer-list>

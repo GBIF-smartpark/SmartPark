@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
+    <!-- 액션바를 없애는 테마 설정 -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- 다른 스타일 속성 설정 -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>
